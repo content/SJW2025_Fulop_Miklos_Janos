@@ -1,0 +1,181 @@
+:root {
+    --turquoise: rgb(2, 138, 158);
+    --dark-turquoise: rgb(9, 81, 92);
+    --green: rgb(73, 126, 23);
+    --blue: rgb(31, 83, 143);
+    --purple: rgb(31 83 143);
+    --red: rgb(151, 23, 23);
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.banner {
+    height: 600px;
+    background-image: url('../img/banner_fruits.png');
+    background-size: cover;
+    background-position: center bottom;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner > .container {
+    position: relative;
+    height: 100%;
+}
+
+.main-title {
+    width: 300px;
+    height: 300px;
+    background-color: rgba(2, 138, 158, 0.25);
+    color: white;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-transform: small-caps;
+    border-radius: 50%;
+    border: 10px double white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 3px 3px 5px black;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 25px;
+}
+
+.navbar {
+    background-color: var(--turquoise);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    opacity: 0.85;
+    position: relative;
+    padding: 8px 16px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    opacity: 1;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::before,
+.navbar-dark .navbar-nav .nav-link:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::before {
+    top: 0;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover::after {
+    bottom: 0;
+}
+
+.section-title {
+    color: var(--dark-turquoise);
+    font-family: 'Heattenschweiler', sans-serif;
+    letter-spacing: 1.5px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.kiwi-image {
+    display: none;
+}
+
+@media (min-width: 770px) {
+    .kiwi-image {
+        display: block;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.accordion-item {
+    border: 1px dashed var(--turquoise);
+    margin-bottom: 0.5rem;
+}
+
+.accordion-button {
+    background-color: var(--turquoise);
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--turquoise);
+    color: white;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: var(--turquoise);
+}
+
+.accordion-body {
+    background-color: rgba(2, 138, 158, 0.2);
+}
+
+.table {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .table {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+.result-box {
+    flex: 1;
+    min-width: 120px;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    border: 3px solid white;
+    background-color: var(--card-color);
+    outline: 3px solid var(--card-color);
+}
+
+.result-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.result-box p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.fat {
+    --card-color: var(--green);
+}
+
+.fiber {
+    --card-color: var(--blue);
+}
+
+.calorie {
+    --card-color: var(--turquoise);
+}
+
+.protein {
+    --card-color: var(--purple);
+}
+
+.carbs {
+    --card-color: var(--red);
+}
